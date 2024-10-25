@@ -1,0 +1,35 @@
+<h3>Lista de Artículos</h3>
+<hr>
+
+<ng-container *ngIf="artEliminado; else noDeletedItems">
+    <h3>
+        Articulo eliminado: 
+        <span class="text-red-500">
+            {{artEliminado}}
+        </span>
+    </h3>
+</ng-container>
+
+<ng-template #noDeletedItems>
+    <h3>
+        No hay artículos eliminados
+    </h3>
+</ng-template>
+<ng-container *ngIf="articulosLst?.length > 0">
+    <button  mat-stroked-button color="warn" 
+    (click)="eliminaUltArt()">
+        Eliminar Ultimo Articulo 
+     </button>
+</ng-container>
+
+<ng-container *ngIf="articulosLst?.length === 0">
+    <button class = "ml-2" mat-stroked-button color="warn" (click)="reset()">
+        Reset
+     </button>
+</ng-container>
+
+
+<mat-list>
+    <mat-list-item
+    *ngFor="let art of articulosLst">{{ art | uppercase }}</mat-list-item>
+</mat-list>
