@@ -8,11 +8,14 @@
 <!-- sm es como un breakpoint, condición: si es más pequeño será row -->
 <div class="flex flex-col sm:flex-col md:flex-row gap-4 py-4">
     <!-- * Listado de medicamentos -->
-    <pharmaceuticals-list> </pharmaceuticals-list>
+    <div class="w-full">
+        <pharmaceuticals-list [pharmaList]="pharmaceuticals"> </pharmaceuticals-list>
+    </div>
     <!-- * Fin listado de medicamentos -->
 
     <!-- * Formulario -->
-    <add-pharmaceuticals></add-pharmaceuticals>
+    <div class="w-full">
+        <add-pharmaceuticals (onNewDrug)="onNewDrug($event)"></add-pharmaceuticals>
+    </div>
     <!-- * Fin formulario -->
-
 </div>

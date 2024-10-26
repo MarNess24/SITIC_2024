@@ -7,7 +7,8 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { ListComponent } from './components/list/list.component';
 import { AddPharmaceuticalsComponent } from './components/add-pharmaceuticals/add-pharmaceuticals.component';
-
+import { EPharmaTypeClassModule } from '../shared/pipes/epharma-type-class/epharma-type-class.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -17,10 +18,12 @@ import { AddPharmaceuticalsComponent } from './components/add-pharmaceuticals/ad
   ],
   imports: [
     CommonModule,
+    FormsModule,
     MatInputModule,
     MatSelectModule,
     MatButtonModule,
-    MatIconModule
+    MatIconModule,
+    EPharmaTypeClassModule
   ],
   exports: [
     PharmaceuticalsComponent
