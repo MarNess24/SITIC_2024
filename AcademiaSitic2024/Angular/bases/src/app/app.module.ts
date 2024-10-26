@@ -8,6 +8,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CounterModule } from './counter/counter.module';
 import { ArticuloModule } from './articulo/articulo/articulo.module';
 import { ListModule } from './articulo/list/list.module';
+import { PharmaceuticalsModule } from './pharmaceuticals/pharmaceuticals.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { ListModule } from './articulo/list/list.module';
     // COMPONENTES CUSTOM
     CounterModule,
     ArticuloModule,
-    ListModule
+    ListModule,
+    PharmaceuticalsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

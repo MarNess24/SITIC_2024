@@ -1,0 +1,5 @@
+.secondary-toolbar {
+    background: white;
+    height: 54px;
+    margin-top: calc(54 px * -1);
+}
