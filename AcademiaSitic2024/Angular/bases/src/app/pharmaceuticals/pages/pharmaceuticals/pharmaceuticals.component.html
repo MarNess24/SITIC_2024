@@ -1,3 +1,82 @@
+<!-- * flex = espaciado automático, py = padding, t: top x: ejes x -->
 <div class="secondary-toolbar shadow-b py-1 border-t flex">
-    
+    <div class="px-gutter flex items-center flex-auto">
+        <h1 class="subheading-2 font-medium  m-0 ltr:pr-3 rtl:pl-3 ltr:border-r rtl:border-l ltr:mr-3 rtl:ml-3 flex-none">Medicamentos</h1>
+    </div>
+</div>
+
+<!-- sm es como un breakpoint, condición: si es más pequeño será row -->
+<div class="flex flex-col sm:flex-col md:flex-row gap-4 py-4">
+    <!-- * Listado de medicamentos -->
+    <div class="w-full">
+        <div class="p-4">
+            <div class="subheading-2">Listado</div>
+
+            <div class="border-b px-4 relative select-none block no-underline text-dark">
+                <div class="flex items-center gap-4">
+                    <div class="overflow-hidden flex-auto">
+                        <div class="body-2">{{ 'ibuprofeno' | uppercase }}</div>
+                        <div class="body-1 text-secondary">$10.000</div>
+                        <div class="flex-none flex flex-col items-end justify-center">
+                            <div class="body-2">Analgésico</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-b px-4 relative select-none block no-underline text-dark">
+                <div class="flex items-center gap-4">
+                    <div class="overflow-hidden flex-auto">
+                        <div class="body-2">{{ 'ibuprofeno' | uppercase }}</div>
+                        <div class="body-1 text-secondary">$10.000</div>
+                        <div class="flex-none flex flex-col items-end justify-center">
+                            <div class="body-2">Analgésico</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="border-b px-4 relative select-none block no-underline text-dark">
+                <div class="flex items-center gap-4">
+                    <div class="overflow-hidden flex-auto">
+                        <div class="body-2">{{ 'ibuprofeno' | uppercase }}</div>
+                        <div class="body-1 text-secondary">$10.000</div>
+                        <div class="flex-none flex flex-col items-end justify-center">
+                            <div class="body-2">Analgésico</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <!-- * Fin listado de medicamentos -->
+
+    <!-- * Formulario -->
+    <div class="w-full">
+        <div class="p-4">
+            <div class="subheading-2">Agregar Medicamento</div>
+            <form >
+                <mat-form-field class="w-full">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput name="Nombre">
+                </mat-form-field>
+
+                <mat-form-field class="w-full">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput="Nombre">
+                </mat-form-field>
+
+                <mat-select name="tipo" class="w-full">
+                    <mat-option value="0">Sin Tipo</mat-option>
+                </mat-select>
+
+                <button type="submit" mat-raised-button color="primary" class="w-full">
+                    <mat-icon svgIcon="mat:add"></mat-icon>
+                </button>
+            </form>
+        </div>
+    </div>
+    <!-- * Fin formulario -->
+
 </div>

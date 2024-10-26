@@ -186,6 +186,9 @@ module.exports = {
                     'background-color': '#FFDAD6',
                     'color': '#BA1A1A'
                 },
+                '.text-secondary': {
+                    'color':'rgba(0, 0, 0, .54) !important'
+                }
             }),
             addComponents({})
     })
